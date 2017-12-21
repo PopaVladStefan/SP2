@@ -16,8 +16,12 @@ x(t<=D) = x_tr;
 figure(1);
 plot(t,x),title('x(t)(linie solida) si reconstructia folosind N coeficienti (linie punctata)');
 hold on;
-for k = -N:N x_t = x_tr; x_t = x_t .* exp(-1i*k*w0*t_tr); X(k+N+1) = 0; for i = 1:length(t_tr)-1
-        X(k+N+1) = X(k+N+1) + (t_tr(i+1)-t_tr(i)) * (x_t(i)+x_t(i+1))/2; 
+for k = -N:N
+        x_t = x_tr;
+        x_t = x_t .* exp(-1i*k*w0*t_tr);
+        X(k+N+1) = 0;
+        for i = 1:length(t_tr)-1
+                X(k+N+1) = X(k+N+1) + (t_tr(i+1)-t_tr(i)) * (x_t(i)+x_t(i+1))/2; 
     end
 end
 for i = 1:length(t)
