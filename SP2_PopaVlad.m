@@ -1,4 +1,4 @@
-%Nr. de ordine=12
+%Nr. catalog=12
 %Semnal triunghiular
 %Perioada=P=40s
 %Durata semnalelor=D=12
