@@ -28,5 +28,6 @@ for i = 1:length(t)
 end
 plot(t,x_finit,'--');
 figure(2);
-w=-50*w0:w0:50*w0; %w=vectorul pt. afisarea spectrului functiei
+%w=vectorul pt. afisarea spectrului functiei
+w=-50*w0:w0:50*w0;
 stem(w/(2*pi),abs(X)),title('Spectrul lui x(t)');
